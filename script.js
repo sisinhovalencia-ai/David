@@ -31,7 +31,6 @@ function createSplash() {
     transition:      'opacity 0.8s ease, transform 0.8s ease',
   });
 
-  /* Estilos internos via <style> inyectado */
   const style = document.createElement('style');
   style.textContent = `
     #splash { font-family: Georgia, serif; text-align: center; }
@@ -112,18 +111,21 @@ function createSplash() {
 /* ── Abrir tarjeta al presionar splash ── */
 function initSplash() {
   const splash = createSplash();
+  const scene  = document.querySelector('.scene'); // ← referencia a la tarjeta
 
   splash.addEventListener('click', () => {
-    /* Animación de salida */
+    /* Animación de salida del splash */
     splash.style.opacity   = '0';
     splash.style.transform = 'scale(1.06)';
 
-    setTimeout(() => {
-      splash.remove();
-    }, 800);
+    /* Mostrar la tarjeta */
+    scene.classList.add('visible'); // ← ESTA ERA LA LÍNEA QUE FALTABA
 
     /* Arranca la música */
     startMusic();
+
+    /* Eliminar splash del DOM */
+    setTimeout(() => splash.remove(), 800);
   }, { once: true });
 }
 
@@ -184,5 +186,5 @@ function toggleMusic() {
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
   createParticles();
-  initSplash(); /* ← muestra splash; la música arranca al hacer clic */
+  initSplash();
 });
