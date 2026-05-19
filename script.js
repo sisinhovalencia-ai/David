@@ -159,11 +159,10 @@ function createParticles() {
 }
 
 /* ── Música ── */
-const audio = document.getElementById('bgMusic');
-const label = document.getElementById('musicLabel');
-const bars  = document.querySelectorAll('.bar');
+let audio;
+let label;
+let bars;
 let playing = false;
-
 function startMusic() {
   audio.play().then(() => {
     playing = true;
@@ -185,6 +184,12 @@ function toggleMusic() {
 
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
+
+  audio = document.getElementById('bgMusic');
+  label = document.getElementById('musicLabel');
+  bars  = document.querySelectorAll('.bar');
+
   createParticles();
   initSplash();
+
 });
