@@ -8,164 +8,200 @@
 </head>
 <body>
 
-  <div id="startOverlay" class="overlay">
-    <div class="overlay-content">
-      <div class="ball-icon">⚽</div>
-      <p>Toca para abrir la tarjeta de David</p>
-    </div>
-  </div>
-
+  <!-- Partículas azulgrana (generadas por script.js) -->
   <div class="particles" id="particles"></div>
 
-  <audio id="bgMusic" loop>
-    <source src="musica.mp3" type="audio/mpeg" />
+  <!-- ═══════════════════════════════════════════════════════
+       🎵  MÚSICA
+       ───────────────────────────────────────────────────────
+       Archivo actual: musica.mp4
+       Para cambiarla reemplaza "musica.mp4" con tu archivo.
+
+       Formatos soportados:
+         .mp3  →  type="audio/mpeg"
+         .ogg  →  type="audio/ogg"
+         .wav  →  type="audio/wav"
+         .mp4  →  type="audio/mp4"
+
+       La música arranca automáticamente al abrir la página.
+       El botón PLAY/PAUSE en el pie la controla.
+       ═══════════════════════════════════════════════════════ -->
+  <audio id="bgMusic" loop autoplay>
+    <source src="musica.mp4" type="audio/mp4" />
   </audio>
 
   <div class="scene">
     <div class="card">
 
+      <!-- Franja superior azulgrana -->
       <div class="top-stripe">
-        <div class="ts-blue"></div>
-        <div class="ts-gold"></div>
-        <div class="ts-red"></div>
-        <div class="ts-gold"></div>
-        <div class="ts-blue"></div>
-        <div class="ts-gold"></div>
-        <div class="ts-red"></div>
-        <div class="ts-gold"></div>
+        <div class="ts-blue"></div><div class="ts-gold"></div>
+        <div class="ts-red"></div> <div class="ts-gold"></div>
+        <div class="ts-blue"></div><div class="ts-gold"></div>
+        <div class="ts-red"></div> <div class="ts-gold"></div>
         <div class="ts-blue"></div>
       </div>
 
+      <!-- ════ HEADER ════ -->
       <div class="card-header">
 
+        <!-- Escudo izquierdo — imagen real escudo.png -->
         <div class="crest">
-          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 5 L85 18 L95 55 Q95 90 50 115 Q5 90 5 55 L15 18 Z" fill="#004D98" stroke="#EDBB00" stroke-width="2.5"/>
-            <path d="M50 5 L50 60 M5 40 L95 40" stroke="#A50044" stroke-width="10" stroke-linecap="butt" opacity="0.9"/>
-            <path d="M50 5 L50 60 M5 40 L95 40" stroke="#F5F0E8" stroke-width="4" stroke-linecap="butt"/>
-            <clipPath id="shield-clip">
-              <path d="M50 5 L85 18 L95 55 Q95 90 50 115 Q5 90 5 55 L15 18 Z"/>
-            </clipPath>
-            <g clip-path="url(#shield-clip)">
-              <rect x="5"  y="60" width="15" height="55" fill="#A50044"/>
-              <rect x="20" y="60" width="15" height="55" fill="#004D98"/>
-              <rect x="35" y="60" width="15" height="55" fill="#A50044"/>
-              <rect x="50" y="60" width="15" height="55" fill="#004D98"/>
-              <rect x="65" y="60" width="15" height="55" fill="#A50044"/>
-              <rect x="80" y="60" width="15" height="55" fill="#004D98"/>
-              <circle cx="50" cy="42" r="10" fill="white" opacity="0.15"/>
-            </g>
-            <path d="M50 5 L85 18 L95 55 Q95 90 50 115 Q5 90 5 55 L15 18 Z" fill="none" stroke="#EDBB00" stroke-width="2.5"/>
-          </svg>
+          <img src="escudo.png" alt="Escudo FC Barcelona" />
         </div>
 
         <div class="header-center">
           <div class="header-motto">Més que un club</div>
           <div class="header-club">FC <span>Barcelona</span></div>
+          <div class="header-stars">
+            <span>★</span><span>★</span><span>★</span>
+            <span>★</span><span>★</span>
+          </div>
         </div>
 
+        <!-- Escudo derecho — imagen real escudo.png -->
         <div class="crest">
-          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 5 L85 18 L95 55 Q95 90 50 115 Q5 90 5 55 L15 18 Z" fill="#004D98" stroke="#EDBB00" stroke-width="2.5"/>
-            <path d="M50 5 L50 60 M5 40 L95 40" stroke="#A50044" stroke-width="10" stroke-linecap="butt" opacity="0.9"/>
-            <path d="M50 5 L50 60 M5 40 L95 40" stroke="#F5F0E8" stroke-width="4" stroke-linecap="butt"/>
-            <clipPath id="shield-clip2">
-              <path d="M50 5 L85 18 L95 55 Q95 90 50 115 Q5 90 5 55 L15 18 Z"/>
-            </clipPath>
-            <g clip-path="url(#shield-clip2)">
-              <rect x="5"  y="60" width="15" height="55" fill="#A50044"/>
-              <rect x="20" y="60" width="15" height="55" fill="#004D98"/>
-              <rect x="35" y="60" width="15" height="55" fill="#A50044"/>
-              <rect x="50" y="60" width="15" height="55" fill="#004D98"/>
-              <rect x="65" y="60" width="15" height="55" fill="#A50044"/>
-              <rect x="80" y="60" width="15" height="55" fill="#004D98"/>
-              <circle cx="50" cy="42" r="10" fill="white" opacity="0.15"/>
-            </g>
-            <path d="M50 5 L85 18 L95 55 Q95 90 50 115 Q5 90 5 55 L15 18 Z" fill="none" stroke="#EDBB00" stroke-width="2.5"/>
-          </svg>
+          <img src="escudo.png" alt="Escudo FC Barcelona" />
         </div>
 
       </div>
 
-      <div class="hero">
+      <!-- ════ HERO BANNER con F5.jpg de fondo ════
+           La imagen F5 (Sant Jordi + escudo Barça) se usa
+           como fondo cinematográfico del banner principal  -->
+      <div class="hero-banner">
+        <div class="hero-banner-bg"></div>
+        <div class="hero-banner-overlay"></div>
+        <div class="hero-banner-content">
+          <div class="hbc-text">
+            <div class="hbc-tag">✦ Un día especial · Culer de corazón ✦</div>
+            <div class="hbc-title">
+              Feliz<br />
+              <em>Cumpleaños</em>
+            </div>
+          </div>
+          <div class="hbc-age">
+            <div class="hbc-age-num">19</div>
+            <div class="hbc-age-lbl">Años</div>
+          </div>
+        </div>
+      </div>
 
+      <!-- ════ SECCIÓN PRINCIPAL: fotos + mensajes ════ -->
+      <div class="main-section">
+
+        <!-- ── COLUMNA DE FOTOS ── -->
         <div class="photos-col">
 
+          <!-- ═══════════════════════════════════════════════
+               📸  FOTO 1
+               ─────────────────────────────────────────────
+               Borra el div.photo-placeholder completo
+               y reemplázalo con:
+
+               <img
+                 src="TU_FOTO_1.jpg"
+                 alt="foto 1"
+                 style="width:100%;height:100%;
+                        object-fit:cover;display:block;"
+               />
+
+               Formatos: JPG · PNG · WEBP
+               ═══════════════════════════════════════════════ -->
           <div class="photo-wrap">
             <div class="photo-frame frame-1">
-              <img src="david.jpg" alt="David" style="width:100%;height:100%;object-fit:cover;display:block;" />
+
+              <!-- 📸 FOTO 1: reemplaza el placeholder con tu imagen -->
+              <div class="photo-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <rect x="2" y="3" width="20" height="18" rx="2"/>
+                  <circle cx="12" cy="11" r="4"/>
+                  <path d="M2 18l5-5 4 4 3-3 5 5"/>
+                </svg>
+                <span>Foto 1</span>
+              </div>
+
             </div>
             <div class="photo-label">⚽ Visca el Barça</div>
           </div>
 
+          <!-- ═══════════════════════════════════════════════
+               📸  FOTO 2
+               ─────────────────────────────────────────────
+               Borra el div.photo-placeholder completo
+               y reemplázalo con:
+
+               <img
+                 src="TU_FOTO_2.jpg"
+                 alt="foto 2"
+                 style="width:100%;height:100%;
+                        object-fit:cover;display:block;"
+               />
+
+               Formatos: JPG · PNG · WEBP
+               ═══════════════════════════════════════════════ -->
           <div class="photo-wrap">
             <div class="photo-frame frame-2">
-              <img src="F2.jpeg" alt="David y amigos" style="width:100%;height:100%;object-fit:cover;display:block;" />
+
+              <!-- 📸 FOTO 2: F2.jpeg ya está enlazada -->
+              <img
+                src="F2.jpeg"
+                alt="foto 2"
+                style="width:100%;height:100%;object-fit:cover;display:block;"
+              />
+
             </div>
             <div class="photo-label">⚽ Culer de corazón</div>
           </div>
 
-        </div><div class="hero-text">
-          <div class="tag-line">✦ Feliz Cumpleaños ✦</div>
-          <div class="main-title">
-            Feliz<br />
-            <em>Cumple</em>
-          </div>
+        </div><!-- /photos-col -->
 
-          <div class="age-badge">
-            <div class="age-num">19</div>
-            <div class="age-unit">
-              <span>Años</span>
-              <span>de gloria</span>
+        <!-- ── CUERPO DERECHO ── -->
+        <div class="right-body">
+
+          <!-- Estadísticas -->
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-num">19</span>
+              <span class="stat-lbl">Años</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">6935</span>
+              <span class="stat-lbl">Días vividos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-lbl">Por ganar</span>
             </div>
           </div>
 
-          <div class="hero-divider">
-            <div class="hd-red"></div>
-            <div class="hd-gold"></div>
-            <div class="hd-blue"></div>
+          <!-- Mensajes -->
+          <div class="messages">
+
+            <div class="msg-block">
+              <p>
+                Hoy cumples <strong>19 años</strong> y eso merece celebrarse con todo.
+                Que este año esté lleno de <strong>logros, aventuras y momentos</strong>
+                que valgan la pena recordar. ¡Como ganar la Champions, hermano! 🎉⚽
+              </p>
+            </div>
+
+            <div class="msg-block personal">
+              <p>
+                Y espero que se te dé la oportunidad de estar con esa
+                <strong>negrita linda</strong> — ¡ganaste mano! 🤝🫂
+                De mi parte, cuando me vaya... no quiero saber más nada de la man. 😅
+              </p>
+            </div>
+
           </div>
 
-          <div class="hero-sub">
-            Un crack en la cancha y fuera de ella.<br/>
-            ¡Que este año sea de Champions! 🏆
-          </div>
-        </div>
+        </div><!-- /right-body -->
 
-      </div><div class="card-body">
+      </div><!-- /main-section -->
 
-        <div class="stats-row">
-          <div class="stat">
-            <span class="stat-num">19</span>
-            <span class="stat-lbl">Años</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">6935</span>
-            <span class="stat-lbl">Días de vida</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">∞</span>
-            <span class="stat-lbl">Títulos por ganar</span>
-          </div>
-        </div>
-
-        <div class="msg-block">
-          <p>
-            Hoy cumples <strong>19 años</strong> y eso merece celebrarse con todo.
-            Que este año esté lleno de <strong>logros, aventuras y momentos</strong>
-            que valgan la pena recordar. ¡Como ganar la Champions, hermano! 🎉⚽
-          </p>
-        </div>
-
-        <div class="msg-block personal">
-          <p>
-            Y espero que se te dé la oportunidad de estar con esa
-            <strong>negrita linda</strong> — ¡ganaste mano! 🤝🫂
-            De mi parte, cuando me vaya... no quiero saber más nada de la man. 😅
-          </p>
-        </div>
-
-      </div><div class="card-footer">
+      <!-- ════ PIE ════ -->
+      <div class="card-footer">
         <span class="footer-tag">Visca el Barça · Visca Catalunya</span>
         <button class="music-btn" onclick="toggleMusic()">
           <div class="bars">
@@ -179,18 +215,18 @@
         </button>
       </div>
 
+      <!-- Franja inferior azulgrana -->
       <div class="bottom-stripe">
-        <div class="bs-blue"></div>
-        <div class="bs-gold"></div>
-        <div class="bs-red"></div>
-        <div class="bs-gold"></div>
-        <div class="bs-blue"></div>
-        <div class="bs-gold"></div>
-        <div class="bs-red"></div>
-        <div class="bs-gold"></div>
+        <div class="bs-blue"></div><div class="bs-gold"></div>
+        <div class="bs-red"></div> <div class="bs-gold"></div>
+        <div class="bs-blue"></div><div class="bs-gold"></div>
+        <div class="bs-red"></div> <div class="bs-gold"></div>
         <div class="bs-blue"></div>
       </div>
 
-    </div></div><script src="script.js"></script>
+    </div><!-- /card -->
+  </div><!-- /scene -->
+
+  <script src="script.js"></script>
 </body>
 </html>
