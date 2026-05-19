@@ -12,22 +12,10 @@
   <div class="particles" id="particles"></div>
 
   <!-- ═══════════════════════════════════════════════════════
-       🎵  MÚSICA
-       ───────────────────────────────────────────────────────
-       Archivo actual: musica.mp4
-       Para cambiarla reemplaza "musica.mp4" con tu archivo.
-
-       Formatos soportados:
-         .mp3  →  type="audio/mpeg"
-         .ogg  →  type="audio/ogg"
-         .wav  →  type="audio/wav"
-         .mp4  →  type="audio/mp4"
-
-       La música arranca automáticamente al abrir la página.
-       El botón PLAY/PAUSE en el pie la controla.
+       🎵  MÚSICA  →  musica.mp3
        ═══════════════════════════════════════════════════════ -->
   <audio id="bgMusic" loop autoplay>
-    <source src="musica.mp4" type="audio/mp4" />
+    <source src="musica.mp3" type="audio/mpeg" />
   </audio>
 
   <div class="scene">
@@ -45,7 +33,7 @@
       <!-- ════ HEADER ════ -->
       <div class="card-header">
 
-        <!-- Escudo izquierdo — imagen real escudo.png -->
+        <!-- Escudo izquierdo -->
         <div class="crest">
           <img src="escudo.png" alt="Escudo FC Barcelona" />
         </div>
@@ -59,18 +47,22 @@
           </div>
         </div>
 
-        <!-- Escudo derecho — imagen real escudo.png -->
+        <!-- Escudo derecho -->
         <div class="crest">
           <img src="escudo.png" alt="Escudo FC Barcelona" />
         </div>
 
       </div>
 
-      <!-- ════ HERO BANNER con F5.jpg de fondo ════
-           La imagen F5 (Sant Jordi + escudo Barça) se usa
-           como fondo cinematográfico del banner principal  -->
-      <div class="hero-banner">
-        <div class="hero-banner-bg"></div>
+      <!-- ════ HERO BANNER  →  fondo: F5.jpg ════ -->
+      <div class="hero-banner" style="position:relative;overflow:hidden;">
+        <div class="hero-banner-bg" style="
+          background-image: url('F5.jpg');
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          inset: 0;
+        "></div>
         <div class="hero-banner-overlay"></div>
         <div class="hero-banner-content">
           <div class="hbc-text">
@@ -93,63 +85,26 @@
         <!-- ── COLUMNA DE FOTOS ── -->
         <div class="photos-col">
 
-          <!-- ═══════════════════════════════════════════════
-               📸  FOTO 1
-               ─────────────────────────────────────────────
-               Borra el div.photo-placeholder completo
-               y reemplázalo con:
-
-               <img
-                 src="TU_FOTO_1.jpg"
-                 alt="foto 1"
-                 style="width:100%;height:100%;
-                        object-fit:cover;display:block;"
-               />
-
-               Formatos: JPG · PNG · WEBP
-               ═══════════════════════════════════════════════ -->
+          <!-- 📸 FOTO 1  →  david.jpg -->
           <div class="photo-wrap">
             <div class="photo-frame frame-1">
-
-              <!-- 📸 FOTO 1: reemplaza el placeholder con tu imagen -->
-              <div class="photo-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <rect x="2" y="3" width="20" height="18" rx="2"/>
-                  <circle cx="12" cy="11" r="4"/>
-                  <path d="M2 18l5-5 4 4 3-3 5 5"/>
-                </svg>
-                <span>Foto 1</span>
-              </div>
-
+              <img
+                src="david.jpg"
+                alt="foto 1"
+                style="width:100%;height:100%;object-fit:cover;display:block;"
+              />
             </div>
             <div class="photo-label">⚽ Visca el Barça</div>
           </div>
 
-          <!-- ═══════════════════════════════════════════════
-               📸  FOTO 2
-               ─────────────────────────────────────────────
-               Borra el div.photo-placeholder completo
-               y reemplázalo con:
-
-               <img
-                 src="TU_FOTO_2.jpg"
-                 alt="foto 2"
-                 style="width:100%;height:100%;
-                        object-fit:cover;display:block;"
-               />
-
-               Formatos: JPG · PNG · WEBP
-               ═══════════════════════════════════════════════ -->
+          <!-- 📸 FOTO 2  →  F2.jpeg -->
           <div class="photo-wrap">
             <div class="photo-frame frame-2">
-
-              <!-- 📸 FOTO 2: F2.jpeg ya está enlazada -->
               <img
                 src="F2.jpeg"
                 alt="foto 2"
                 style="width:100%;height:100%;object-fit:cover;display:block;"
               />
-
             </div>
             <div class="photo-label">⚽ Culer de corazón</div>
           </div>
